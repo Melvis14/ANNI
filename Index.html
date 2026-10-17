@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 9 Months 💖</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ffe6ea 0%, #fdf2f4 100%);
+            min-height: 100vh;
+        }
+
+        h1, h2, .cursive {
+            font-family: 'Caveat', cursive;
+        }
+
+        /* Upgraded Floating Hearts & Flowers Animation */
+        .heart-bg {
+            position: absolute;
+            color: #ffb6c1;
+            opacity: 0.7;
+            animation: floatUp ease-in-out infinite;
+            z-index: 0;
+            pointer-events: none;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Gives them a soft glow */
+        }
+
+        /* Added swaying motion to the float! */
+        @keyframes floatUp {
+            0% { 
+                transform: translateY(100vh) translateX(0) scale(0.5) rotate(0deg); 
+                opacity: 0; 
+            }
+            20% { 
+                opacity: 0.85; 
+            }
+            50% {
+                transform: translateY(40vh) translateX(30px) scale(1) rotate(180deg);
+            }
+            80% { 
+                opacity: 0.85; 
+            }
+            100% { 
+                transform: translateY(-10vh) translateX(-30px) scale(1.2) rotate(360deg); 
+                opacity: 0; 
+            }
+        }
+
+        /* Confetti Animation */
+        .confetti-heart {
+            position: fixed;
+            font-size: 2rem;
+            color: #ff69b4;
+            animation: fallDown cubic-bezier(0.21, 0.53, 0.29, 0.99) forwards;
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        @keyframes fallDown {
+            0% { transform: translateY(-10vh) scale(0.5) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) scale(1.5) rotate(720deg); opacity: 0; }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 182, 193, 0.6);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.2); /* Enhanced shadow */
+        }
+
+        /* Prevent No Button Text Selection */
+        #noBtn {
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Polaroid styling for photos */
+        .polaroid {
+            background: white;
+            padding: 12px 12px 35px 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: 1px solid #ffe6ea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .polaroid:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            box-shadow: 0 12px 25px rgba(255,105,180,0.3);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="relative flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 min-h-screen">
+
+    <!-- Background Flowers Container -->
+    <div id="hearts-container" class="fixed inset-0 overflow-hidden pointer-events-none z-0"></div>
+
+    <!-- Main Content Card -->
+    <div class="glass-card max-w-3xl w-full space-y-10 p-8 md:p-12 rounded-3xl z-10 relative">
+        
+        <!-- Header -->
+        <div class="text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-pink-500 mb-2 tracking-wide">
+                Happy 9 Months, My Love <span class="animate-pulse inline-block">💖</span>
+            </h1>
+            <p class="text-pink-400 font-medium text-lg mt-4">To the most beautiful girl in the world...</p>
+        </div>
+
+        <!-- Photo Gallery Section -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 my-8">
+            <div class="polaroid transform -rotate-6 w-56">
+                <img src="1ST.jpeg" alt="Us 1" class="w-full h-48 object-cover rounded-sm border border-gray-100">
+                <p class="text-center mt-3 text-pink-400 font-medium text-sm">18.01.2026💝🎖️</p>
+            </div>
+            <div class="polaroid transform rotate-2 w-56 md:-mt-8 z-1">
+                <img src="2ND.jpeg" alt="Us 2" class="w-full h-48 object-cover rounded-sm border border-gray-100">
+                <p class="text-center mt-3 text-pink-400 font-medium text-sm">A TRUE PRINCESS</p>
+            </div>
+            <div class="polaroid transform -rotate-3 w-56 z-0">
+                <img src="3RD.jpeg" alt="Us 3" class="w-full h-48 object-cover rounded-sm border border-gray-100">
+                <p class="text-center mt-3 text-pink-400 font-medium text-sm">Forever us</p>
+            </div>
+        </div>
+
+        <!-- Single Video Section -->
+        <div class="my-10 w-full max-w-4xl mx-auto bg-white p-3 md:p-5 rounded-2xl shadow-lg border border-pink-100 transform rotate-1 hover:rotate-0 transition-transform z-10 relative">
+            <p class="text-center mb-3 text-pink-500 font-bold text-2xl md:text-3xl cursive">Our Beautiful Memories 🎬</p>
+            
+            <video controls class="w-full rounded-xl border-2 border-pink-50 outline-none">
+                <source src="My_A.MP4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <p class="text-center mt-3 text-pink-400 font-medium text-sm">I loved putting this together for you</p>
+        </div>
+
+        <!-- Message Body -->
+        <div class="space-y-6 text-gray-700 text-lg md:text-xl leading-relaxed">
+            <p>
+                Every single day of these past 9 months with you has been a true blessing. You bring so much light, warmth, and joy into my life, and my love for you just keeps growing stronger with every passing second. You are my princess, my best friend, and my whole world.
+            </p>
+            
+            <div class="bg-pink-50 p-6 md:p-8 rounded-2xl border border-pink-200 shadow-inner">
+                <p class="mb-4">
+                    I also want to take this moment to say how incredibly sorry I am. I apologize from the bottom of my heart for my recent actions and how things spiraled during our recent messaging dispute. 
+                </p>
+                <p>
+                    You mean absolutely everything to me, and the last thing I ever want to do is make you upset, stressed, or feel unloved over a text thread. I promise to do better, to communicate more clearly and patiently, and to cherish you exactly how you deserve to be cherished. I hate fighting with the person I love most.
+                </p>
+            </div>
+            
+            <p class="text-center cursive text-4xl text-pink-500 mt-8 font-bold">
+                I love you more than words can say.
+            </p>
+        </div>
+
+        <!-- Personal Voice Note -->
+        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-pink-200 mt-8 mb-4 flex flex-col items-center transform transition hover:scale-105 duration-300">
+            <p class="text-pink-500 font-bold mb-3 cursive text-3xl">A little message from my heart 🎙️</p>
+            <audio controls class="rounded-full outline-none w-full max-w-sm h-12 shadow-inner">
+                <source src="A&M.MP3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p class="text-gray-400 mt-2 text-xs font-medium">Press play to hear me</p>
+        </div>
+
+        <!-- Interactive Section -->
+        <div class="pt-8 border-t-2 border-pink-100 mt-10" id="question-section">
+            <h2 class="text-4xl md:text-5xl text-center text-pink-600 mb-10 cursive">Will you forgive me? 🥺</h2>
+            
+            <div class="flex justify-center items-center gap-6 relative min-h-[70px]">
+                <button id="yesBtn" class="bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white font-bold py-3 px-10 rounded-full shadow-lg transform transition hover:scale-110 active:scale-95 text-xl z-20">
+                    Yes, I forgive you! 🥰
+                </button>
+                
+                <button id="noBtn" class="bg-gray-200 text-gray-500 font-bold py-3 px-10 rounded-full shadow cursor-not-allowed text-xl z-20 transition-all duration-200">
+                    No 😤
+                </button>
+            </div>
+        </div>
+
+        <!-- Success Message (Hidden initially) -->
+        <div id="success-message" class="hidden pt-8 border-t-2 border-pink-100 mt-8 text-center animate-fade-in-up">
+            <h2 class="text-5xl md:text-6xl text-pink-500 mb-6 cursive font-bold">Yay! Thank you baby! 🎉💕</h2>
+            <p class="text-xl text-gray-700 bg-pink-50 p-4 rounded-xl inline-block border border-pink-100 mb-6">
+                I promise to make it up to you. I love you so much! 💝
+            </p>
+            
+            <!-- Fresh Start Connection -->
+            <div class="mt-4 p-4 border-2 border-dashed border-pink-300 rounded-xl bg-white max-w-md mx-auto shadow-sm">
+                <p class="text-xl text-pink-600 font-bold cursive mb-2">Let's start fresh right now...</p>
+                <p class="text-gray-600 font-medium text-lg">
+                    Send me a huge hug on Obimy when you see this!!!!! 🐾💖
+                </p>
+            </div>
+        </div>
+
+        <!-- Formspree Integration -->
+        <form id="formspree-form" action="https://formspree.io/f/xrpejnpv" method="POST" class="hidden">
+            <input type="hidden" name="message" value="She said YES! She forgives you! 🎉">
+        </form>
+
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'anniversary-app';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        
+        let db, auth, user;
+
+        if (firebaseConfig && Object.keys(firebaseConfig).length > 0) {
+            const app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+            auth = getAuth(app);
+            
+            const initAuth = async () => {
+                try {
+                    if (typeof __initial_auth_token !== 'undefined') {
+                        await signInWithCustomToken(auth, __initial_auth_token);
+                    } else {
+                        await signInAnonymously(auth);
+                    }
+                    user = auth.currentUser;
+                } catch (error) {
+                    console.error("Firebase auth error:", error);
+                }
+            };
+            initAuth();
+        }
+
+        // Upgraded Floating Background Hearts & FLOWERS
+        function createBackgroundHearts() {
+            const container = document.getElementById('hearts-container');
+            
+            // Huge variety of flowers, butterflies, and hearts!
+            const elements = ['🌸', '🌺', '🌷', '🌼', '🌻', '🌹', '💐', '💖', '💕', '💗', '✨', '🦋'];
+            
+            // Reduced interval to 150ms to spawn double the amount of flowers!
+            setInterval(() => {
+                const bgElement = document.createElement('div');
+                bgElement.classList.add('heart-bg');
+                bgElement.innerText = elements[Math.floor(Math.random() * elements.length)];
+                
+                // Randomize position
+                bgElement.style.left = Math.random() * 100 + 'vw';
+                
+                // Randomize speed between 7s and 12s for a smoother float
+                bgElement.style.animationDuration = (Math.random() * 5 + 7) + 's';
+                
+                // Huge size variation! Some tiny, some massive like they are right in front of the screen
+                bgElement.style.fontSize = (Math.random() * 2.5 + 1) + 'rem'; 
+                
+                container.appendChild(bgElement);
+                
+                // Clean up after it floats away
+                setTimeout(() => { bgElement.remove(); }, 12000);
+            }, 150); 
+        }
+
+        // Confetti Hearts for "Yes"
+        function triggerConfetti() {
+            const heartChars = ['💖', '🌸', '🌺', '💝', '🌷', '🎉', '✨'];
+            for (let i = 0; i < 70; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('confetti-heart');
+                    heart.innerText = heartChars[Math.floor(Math.random() * heartChars.length)];
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    document.body.appendChild(heart);
+                    setTimeout(() => { heart.remove(); }, 4000);
+                }, i * 40);
+            }
+        }
+
+        createBackgroundHearts();
+
+        // Button Logic
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const questionSection = document.getElementById('question-section');
+        const successMessage = document.getElementById('success-message');
+
+        // Yes Button Click
+        yesBtn.addEventListener('click', async () => {
+            triggerConfetti();
+            questionSection.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+
+            if (user && db) {
+                try {
+                    await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'responses'), {
+                        response: 'She clicked YES! 🥰',
+                        timestamp: new Date().toISOString()
+                    });
+                } catch (e) {
+                    console.error("Error saving to database:", e);
+                }
+            }
+
+            const form = document.getElementById('formspree-form');
+            if (form && !form.action.includes('YOUR_FORMSPREE_ID')) {
+                const formData = new FormData(form);
+                fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' }});
+            }
+        });
+
+        // No Button Dodge Logic
+        function moveNoButton() {
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            const btnWidth = noBtn.offsetWidth;
+            const btnHeight = noBtn.offsetHeight;
+            const padding = 30;
+            const randomX = padding + Math.random() * (viewportWidth - btnWidth - (padding * 2));
+            const randomY = padding + Math.random() * (viewportHeight - btnHeight - (padding * 2));
+
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+            noBtn.style.zIndex = '9999';
+        }
+
+        noBtn.addEventListener('mouseover', moveNoButton);
+        noBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            moveNoButton();
+        });
+    </script>
+</body>
+</html>
